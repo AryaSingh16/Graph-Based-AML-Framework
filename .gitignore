@@ -1,0 +1,26 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Datasets and large binary files
+data/
+checkpoints/
+results/
+*.pt
+*.pth
+*.csv
+
+# IDEs and OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
