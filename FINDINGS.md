@@ -1,9 +1,9 @@
-# Research Findings: Graph Neural Fraud Engine
+# Research Findings: 
 
 This document details the critical discoveries made during the systematic evaluation of Graph Neural Networks (GNNs) versus Classical Machine Learning on the Elliptic Bitcoin dataset.
 
 ## Finding 1: The "Graph Camouflage" Phenomenon
-**Hypothesis:** GNNs will outperform feature-only models because fraudulent transactions operate in coordinated network rings.
+**Hypothesis:** GNNs will outperform feature-only models because fraudulent transactions operate in coordinated network rings.  
 **Result:** False. Random Forest (0.9946 AUC) outperformed the best standard GNN (0.8699 AUC) by 12.5%.
 **Root Cause:** The Elliptic dataset exhibits extreme **heterophily** for illicit nodes. Fraudsters actively engage in *Graph Camouflage*—routing dirty Bitcoin through high-volume, legitimate services (exchanges, mixers) to blend in. Standard GNNs (GCN, GraphSAGE) act as low-pass filters; they average the target's features with its legitimate neighbors, effectively "washing away" the suspicious signal.
 
